@@ -76,9 +76,10 @@ if __name__ == '__main__':
     
     tree_method = 'hist'
     model_name = 'model.json'
+    n_jobs=35
     clf = xgb.XGBClassifier()
     
     model_path = Path('../../models')
     clf.load_model(model_path/model_name)
+    
     evaluate_model(clf, gold_X)
-    print(model_name)
