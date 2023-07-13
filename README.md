@@ -11,13 +11,17 @@ To install the necessary requirements, run the following commands:
 ``pip install -r requirements.txt``
 # Data and Model
 The trained model and data can be downloaded [here](https://drive.google.com/drive/folders/1TZoHnmIqrYWkHoslFvwT4sKkH2OB5bZw?usp=sharing)  
-Place model.json in the models directory.  
-Unzip processed.zip into the data/processed directory.  
+Unzip model.zip into the models directory.  
+Unzip evaluation.zip into the data/processed directory.  
 The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.
+Unzip Synset-2.zip into the data/processed directory.
 # Evaluate Model
-You can evaluate the model by the files in the src/models directory.  
+You can evaluate the model with the files in the src/models directory.  
 ``python evaluate_biocyc.py`` will write a csv file into the directory with the results of mlXGPR on the six single organism T1 PGDBs as in Table 4.  
 ``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic using taxonomic pruning on the six single organism T1 PGDBs as in Table 4.  
 ``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR on the CAMI dataset as in Table 5.
+# Train Model
+You can train a model with the files in the src/models directory.
+``python train_model.py`` will train and save a model 'model.json' into the models directory.
 # References
 In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.
