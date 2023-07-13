@@ -13,7 +13,7 @@ To install the necessary requirements, run the following commands:
 The trained model and data can be downloaded [here](https://drive.google.com/drive/folders/1TZoHnmIqrYWkHoslFvwT4sKkH2OB5bZw?usp=sharing)  
 Unzip model.zip into the models directory.  
 Unzip evaluation.zip into the data/processed directory.  
-The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.
+The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.  
 Unzip Synset-2.zip into the data/processed directory.
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
