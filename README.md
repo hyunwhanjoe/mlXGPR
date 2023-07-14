@@ -21,7 +21,7 @@ You can evaluate the model with the files in the src/models directory.
 ``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic using taxonomic pruning on the six single organism T1 PGDBs as in Table 4.  
 ``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR on the CAMI dataset as in Table 5.
 # Train Model
-You can train a model with the files in the src/models directory.
+You can train a model with the files in the src/models directory.  
 ``python train_model.py`` will train and save a model 'model.json' into the models directory.
 # References
 In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.
