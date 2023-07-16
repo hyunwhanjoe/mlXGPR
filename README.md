@@ -14,7 +14,9 @@ The trained model and data can be downloaded [here](https://drive.google.com/dri
 Unzip model.zip into the models directory.  
 Unzip evaluation.zip into the data/processed directory.  
 The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.  
-Unzip Synset-2.zip into the data/processed directory.
+Unzip Synset-2.zip into the data/processed directory.  
+# References
+In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.  
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
 ``python evaluate_biocyc.py`` will write a csv file into the directory with the results of mlXGPR on the six single organism T1 PGDBs as in Table 4.  
@@ -38,5 +40,3 @@ It takes about 32 minutes to train a model from our server with n_jobs=10.
 -For the Pathway Scoring Parameters, select No for Prepare Blast databases and press okay to predict pathways for the PGDB. If you get a warning that blastp.exe wasn't found dismiss it. You can close the PathoLogic window now.  
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
 -In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\data  
-# References
-In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.
