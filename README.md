@@ -28,7 +28,7 @@ You can train a model with the files in the src/models directory.
 It takes about 28.5 minutes to train a model from our server with n_jobs=35.  
 It takes about 32 minutes to train a model from our server with n_jobs=10.  
 # Creating a PGDB with PathoLogic  
--We used PathoLogic version 22 to generate the PGDBs.  
+-We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
 -After you installed Pathway Tools, open it and on the Tools tab click on PathoLogic.  
 -When the the PathoLogic window opens on the Database tab, click on Create New.  
