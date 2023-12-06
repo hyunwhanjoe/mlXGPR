@@ -33,10 +33,10 @@ It takes about 32 minutes to train a model from our server with n_jobs=10.
 -After you installed Pathway Tools, open it and on the Tools tab click on PathoLogic.  
 -When the the PathoLogic window opens on the Database tab, click on Create New.  
 -After naming the PGDB, choose the Organism taxonomic class. For example the class for AraCyc is Arabidopsis thaliana.  
--Create the PGDB afterwards by pressing ok.  
+-Create the PGDB afterwards by pressing ok. 
 -Press No to skip the replicon editor.  
 -Put the relevant 0.pf and genetic-elements.dat files (located in the pathologic directory in evaluation.zip) in the input directory where your PGDB is stored. For example on Windows the input directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\input  
 -Go to the Build tabs on the PathoLogic window and select Trial Parse to see if there is any issues. If there aren't, select Automated Build.  
--For the Pathway Scoring Parameters, select No for Prepare Blast databases and press okay to predict pathways for the PGDB. If you get a warning that blastp.exe wasn't found dismiss it. You can close the PathoLogic window now.  
+-For the Pathway Scoring Parameters, we selected No for Generate Cellular Overview and Prepare Blast databases. If you get a warning that blastp.exe wasn't found you can dismiss it. Press okay to create your PGDB and close the PathoLogic window after it is created.   
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
 -In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\data  
