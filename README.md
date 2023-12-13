@@ -1,5 +1,7 @@
 # Description
 This is the codebase for the manuscript "Multi-label Classification with XGBoost for Metabolic Pathway Prediction".  
+We are currently updating the source code and data to match the revision to the manuscript submitted on 23/12/13.  
+
 The project structure is based on the [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) project structure.  
 All tests were conducted on an Ubuntu 20.04.5 server with dual Intel Xeon CPU E5-2640 v4 and 94G ram.  
 We used [miniconda](https://docs.conda.io/en/latest/miniconda.html) as our package and environment management system.  
