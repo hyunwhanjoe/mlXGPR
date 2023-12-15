@@ -73,11 +73,11 @@ if __name__ == '__main__':
     gold_X = data_path/'gold_dataset_6_X.npy'
     gold_y = data_path/'gold_dataset_6_y.npy'
     
-    # model_name = 'mlXGPR_AB.json'
-    # gold_X, gold_y = read_data(gold_X, gold_y, y_type, ab_only=True)
+    model_name = 'mlXGPR_AB.json'
+    gold_X, gold_y = read_data(gold_X, gold_y, y_type, ab_only=True)
     
-    model_name = 'mlXGPR_AB_RE.json'
-    gold_X, gold_y = read_data(gold_X, gold_y, y_type)
+    # model_name = 'mlXGPR_AB_RE.json'
+    # gold_X, gold_y = read_data(gold_X, gold_y, y_type)
     
     clf = xgb.XGBClassifier()
     model_path = Path('../../models')
