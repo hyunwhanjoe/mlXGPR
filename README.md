@@ -28,7 +28,8 @@ Or you can comment out line 315 and uncomment line 316.
 If you want the results of mlXGPR+AB+RE comment lines 76-77 and uncomment lines 79-80.  
 ``python evaluate_chain.py`` will write a csv file into the directory with the results of mlXGPR+Chain on the six single organism T1 PGDBs as in Table 4.  
 If you want the results of mlXGPR+RankChain change the model_name variable or comment line 13 and uncomment line 14.  
-``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR on the CAMI dataset as in Table 5.  
+``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR+RankChain on the CAMI dataset as in Table 5.  
+If you want the results of mlXGPR+RankChain (BioCyc) change the model_name variable or comment line 33 and uncomment line 34.  
 # Train Model
 Updating
 # Creating a PGDB with PathoLogic  
