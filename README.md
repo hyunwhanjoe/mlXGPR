@@ -22,7 +22,8 @@ In the references directory there are two csv files that summarizes the index an
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
 ``python evaluate_biocyc.py`` will write a csv file into the directory with the results of mlXGPR on the six single organism T1 PGDBs as in Table 4.  
-``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic using taxonomic pruning on the six single organism T1 PGDBs as in Table 4.  
+``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic without pruning on the six single organism T1 PGDBs as in Table 4.  
+In line 315 of the file, if you change the data_path variable to the pruned directory and run the program you will get the results of PathoLogic with pruning.  
 ``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR on the CAMI dataset as in Table 5.  
 # Train Model
 You can train a model with the files in the src/models directory.  
