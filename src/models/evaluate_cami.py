@@ -35,5 +35,4 @@ model_name = 'mlXGPR_RankChain.pkl'
 
 model_path = Path('../../models')
 clf = load_pickle(model_path/model_name)
-
 evaluate_model(clf, X, y)
