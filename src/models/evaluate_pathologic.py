@@ -247,7 +247,7 @@ def transform_predictions(pwlabel_idx, n_pws, biocyc):
             y_hat[int(pwlabel_idx[pw])] = 1
         else:
             missing_pws.append(pw)
-    print(f'missing {missing_pws}') # MetaCyc 22
+    # print(f'missing {missing_pws}') # MetaCyc 22
     
     return y_hat
 
@@ -259,7 +259,8 @@ def evaluate_pathologic(pwlabel_idx, n_pws):
     recalls = []
     f1s = []
     
-    data_path='../../data/processed/pathologic/'
+    data_path='../../data/processed/pathologic/unpruned/'
+    # data_path='../../data/processed/pathologic/pruned/'
     y = '../../data/processed/gold_dataset_6_y.npy'
     with open(y, 'rb') as y_file:
         gold_y = np.load(y_file, allow_pickle=False)
