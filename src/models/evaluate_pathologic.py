@@ -251,7 +251,7 @@ def transform_predictions(pwlabel_idx, n_pws, biocyc):
     
     return y_hat
 
-def evaluate_pathologic(pwlabel_idx, n_pws):
+def evaluate_pathologic(pwlabel_idx, n_pws, data_path):
     gold_pgdbs = ['aracyc', 'ecocyc', 'humancyc', 'leishcyc', 'trypanocyc', 'yeastcyc']
     order = ['ecocyc', 'humancyc', 'aracyc', 'yeastcyc', 'leishcyc', 'trypanocyc']
     hamms=[]
@@ -259,8 +259,6 @@ def evaluate_pathologic(pwlabel_idx, n_pws):
     recalls = []
     f1s = []
     
-    data_path='../../data/processed/pathologic/unpruned/'
-    # data_path='../../data/processed/pathologic/pruned/'
     y = '../../data/processed/gold_dataset_6_y.npy'
     with open(y, 'rb') as y_file:
         gold_y = np.load(y_file, allow_pickle=False)
@@ -314,4 +312,7 @@ csv_file = '../../references/idx_pw.csv'
 pwlabel_idx = load_csvindex(csv_file, 'Pathway', 'index')
 n_pws = len(pwlabel_idx)
 
-evaluate_pathologic(pwlabel_idx, n_pws)
+data_path='../../data/processed/pathologic/unpruned/'
+# data_path='../../data/processed/pathologic/pruned/'
+
+evaluate_pathologic(pwlabel_idx, n_pws, data_path)
