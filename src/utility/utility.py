@@ -7,15 +7,20 @@ from sklearn import preprocessing
 """
 This function assumes that there are 3650 enzymatic reactions
 """
-def read_data(X_path, y_path, y_type, binarize=False):
+def read_data(X_path, y_path, y_type, binarize=False, ab_only=False):
     with open(X_path, 'rb') as X_file, open(y_path, 'rb') as y_file:
         X = np.load(X_file, allow_pickle=False)
         y = np.load(y_file, allow_pickle=False)
         y = y.astype(y_type)
         
+        n_ecs=3650
         if binarize:
             print('abundance binarized')
-            preprocessing.binarize(X[:, :3650], copy=False)
+            preprocessing.binarize(X[:, :n_ecs], copy=False)
+        
+        if ab_only:
+            print('abundance only')
+            X = X[:,:n_ecs]
         
         return X, y
         

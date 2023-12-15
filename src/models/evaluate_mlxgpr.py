@@ -12,7 +12,7 @@ import sys
 sys.path.append('../utility')
 from utility import read_data
 
-def evaluate_model(clf, gold_X, early_stop=False):
+def evaluate_model(clf, gold_X, gold_y, early_stop=False):
     gold_pgdbs = ['AraCyc', 'EcoCyc', 'HumanCyc', 'LeishCyc', 'TrypanoCyc', 'YeastCyc']
     order = ['EcoCyc', 'HumanCyc', 'AraCyc', 'YeastCyc', 'LeishCyc', 'TrypanoCyc']
     hamms=[]
@@ -29,10 +29,10 @@ def evaluate_model(clf, gold_X, early_stop=False):
         y = gold_y[i]
         y_hat = Y_hat[i]
         
-        hamms.append(round(hamming_loss(y, y_hat),4))
-        precs.append(round(precision_score(y, y_hat),4))
-        recalls.append(round(recall_score(y, y_hat),4))
-        f1s.append(round(f1_score(y, y_hat),4))
+        hamms.append(f'{hamming_loss(y, y_hat):.4f}')
+        precs.append(f'{precision_score(y, y_hat):.4f}')
+        recalls.append(f'{recall_score(y, y_hat):.4f}')
+        f1s.append(f'{f1_score(y, y_hat):.4f}')
         
     def reorder():
         pgdb_map = {pgdb:i for i, pgdb in enumerate(gold_pgdbs)}
@@ -72,14 +72,15 @@ if __name__ == '__main__':
     y_type = 'int64'
     gold_X = data_path/'gold_dataset_6_X.npy'
     gold_y = data_path/'gold_dataset_6_y.npy'
+    
+    # model_name = 'mlXGPR_AB.json'
+    # gold_X, gold_y = read_data(gold_X, gold_y, y_type, ab_only=True)
+    
+    model_name = 'mlXGPR_AB_RE.json'
     gold_X, gold_y = read_data(gold_X, gold_y, y_type)
     
-    tree_method = 'hist'
-    model_name = 'model.json'
-    n_jobs=35
     clf = xgb.XGBClassifier()
-    
     model_path = Path('../../models')
     clf.load_model(model_path/model_name)
     
-    evaluate_model(clf, gold_X)
+    evaluate_model(clf, gold_X, gold_y)
