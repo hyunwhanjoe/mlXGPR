@@ -13,23 +13,22 @@ To install the necessary requirements, run the following commands:
 ``pip install -r requirements.txt``
 # Data and Model
 The trained model and data can be downloaded [here](https://drive.google.com/drive/folders/1TZoHnmIqrYWkHoslFvwT4sKkH2OB5bZw?usp=sharing)  
-Unzip models.zip into the models directory.  
-Unzip evaluation.zip into the data/processed directory.  
-The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.  
-Unzip Synset-2.zip into the data/processed directory.  
+-Unzip models.zip into the models directory.  
+-Unzip evaluation.zip into the data/processed directory. The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.  
+-Unzip Synset-2.zip into the data/processed directory.  
 # References
 In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.  
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
+  
 ``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic without pruning on the six single organism T1 PGDBs as in Table 4.  
-In line 315 of the file, if you change the data_path variable to the pruned directory and run the program you will get the results of PathoLogic with pruning.  
-Or you can comment out line 315 and uncomment line 316.  
-``python evaluate_mlxgpr.py`` will write a csv file into the directory with the results of mlXGPR+AB on the six single organism T1 PGDBs as in Table 4.  
-If you want the results of mlXGPR+AB+RE comment lines 76-77 and uncomment lines 79-80.  
-``python evaluate_chain.py`` will write a csv file into the directory with the results of mlXGPR+Chain on the six single organism T1 PGDBs as in Table 4.  
-If you want the results of mlXGPR+RankChain change the model_name variable or comment line 13 and uncomment line 14.  
-``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR+RankChain on the CAMI dataset as in Table 5.  
-If you want the results of mlXGPR+RankChain (BioCyc) change the model_name variable or comment line 33 and uncomment line 34.  
+In line 315 of the file, if you change the data_path variable to the pruned directory and run the program you will get the results of PathoLogic with pruning. Or you can comment out line 315 and uncomment line 316.  
+  
+``python evaluate_mlxgpr.py`` will write a csv file into the directory with the results of mlXGPR+AB on the six single organism T1 PGDBs as in Table 4. If you want the results of mlXGPR+AB+RE comment lines 76-77 and uncomment lines 79-80.  
+  
+``python evaluate_chain.py`` will write a csv file into the directory with the results of mlXGPR+Chain on the six single organism T1 PGDBs as in Table 4. If you want the results of mlXGPR+RankChain change the model_name variable or comment line 13 and uncomment line 14.  
+  
+``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR+RankChain on the CAMI dataset as in Table 5. If you want the results of mlXGPR+RankChain (BioCyc) change the model_name variable or comment line 33 and uncomment line 34.  
 # Train Model
 Updating
 # Creating a PGDB with PathoLogic  
