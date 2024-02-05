@@ -22,8 +22,7 @@ In the references directory there are two csv files that summarizes the index an
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
   
-``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic without pruning on the six single organism T1 PGDBs as in Table 4.  
-In line 315 of the file, if you change the data_path variable to the pruned directory and run the program you will get the results of PathoLogic with pruning. Or you can comment out line 315 and uncomment line 316.  
+``python evaluate_pathologic.py`` will write a csv file into the directory with the results of PathoLogic without pruning on the six single organism T1 PGDBs as in Table 4. In line 315 of the file, if you change the data_path variable to the pruned directory and run the program you will get the results of PathoLogic with pruning. Or you can comment out line 315 and uncomment line 316.  
   
 ``python evaluate_mlxgpr.py`` will write a csv file into the directory with the results of mlXGPR+AB on the six single organism T1 PGDBs as in Table 4. If you want the results of mlXGPR+AB+RE comment lines 76-77 and uncomment lines 79-80.  
   
@@ -31,7 +30,7 @@ In line 315 of the file, if you change the data_path variable to the pruned dire
   
 ``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR+RankChain on the CAMI dataset as in Table 5. If you want the results of mlXGPR+RankChain (BioCyc) change the model_name variable or comment line 33 and uncomment line 34.  
 # Train Model
-Updating
+``python train_mlxgpr.py`` will write a csv file into the directory with the results of mlXGPR+AB on the six single organism T1 PGDBs as in Table 4. It takes about 30 minutes to train with n_jobs=35 on our server.   
 # Creating a PGDB with PathoLogic  
 -We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
