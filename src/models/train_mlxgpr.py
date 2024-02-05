@@ -19,19 +19,20 @@ data_path = Path('../../data/processed')
 y_type = 'int64'
 X_path = data_path/'Synset-2_X.npy'
 y_path = data_path/'Synset-2_y.npy'
-X_train, y_train = read_data(X_path, y_path, y_type)
+
+model_name = 'mlXGPR_AB.json'
+X_train, y_train = read_data(X_path, y_path, y_type, ab_only=True)
 
 n_jobs=35
 clf = xgb.XGBClassifier(n_jobs=n_jobs,
                         tree_method='hist',
                         max_depth=4,
-                        n_estimators=19)
+                        n_estimators=22)
 
 t0 = time.time()
 clf.fit(X_train, y_train)
 t1 = time.time() - t0
 
-model_name = 'model.json'
 log(model_name, t1, n_jobs)
 
 model_path = Path('../../models')
