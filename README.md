@@ -7,11 +7,16 @@ The project structure is based on the [Cookiecutter Data Science](https://driven
 All tests were conducted on an Ubuntu 20.04.5 server with dual Intel Xeon CPU E5-2640 v4 and 94G ram.  
 We used [miniconda](https://docs.conda.io/en/latest/miniconda.html) as our package and environment management system.  
 After installing miniconda, use ``conda create -n mlxgpr python=3.9`` to create a python 3.9 environment called mlxgpr.  
-Afterwards activate the environment with ``conda activate mlxgpr``  
+Afterwards activate the environment with 
+```bash
+conda activate mlxgpr
+```  
 # Dependencies
 The codebase is tested to work under Python 3.9.  
 To install the necessary requirements, run the following commands:  
-``pip install -r requirements.txt``
+```bash
+pip install -r requirements.txt
+```
 # Data and Model
 The trained model and data can be downloaded [here](https://drive.google.com/drive/folders/1TZoHnmIqrYWkHoslFvwT4sKkH2OB5bZw?usp=sharing)  
 -Unzip models.zip into the models directory.  
