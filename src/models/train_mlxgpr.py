@@ -23,6 +23,9 @@ y_path = data_path/'Synset-2_y.npy'
 model_name = 'mlXGPR_AB.json'
 X_train, y_train = read_data(X_path, y_path, y_type, ab_only=True)
 
+# model_name = 'mlXGPR_AB_RE.json'
+# X_train, y_train = read_data(X_path, y_path, y_type)
+
 n_jobs=35
 clf = xgb.XGBClassifier(n_jobs=n_jobs,
                         tree_method='hist',
