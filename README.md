@@ -24,6 +24,7 @@ The trained model and data can be downloaded [here](https://drive.google.com/dri
 -Unzip Synset-2.zip into the data/processed directory.  
 # References
 In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.  
+The order.txt file lists the order of the classifier chain.  
 # Evaluate Model
 You can evaluate the model with the files in the src/models directory.  
   
@@ -36,7 +37,8 @@ You can evaluate the model with the files in the src/models directory.
 ``python evaluate_cami.py`` will write a csv file into the directory with the results of mlXGPR+RankChain on the CAMI dataset as in Table 5. If you want the results of mlXGPR+RankChain (BioCyc) change the model_name variable or comment line 33 and uncomment line 34.  
 # Train Model
 ``python train_mlxgpr.py`` will train a mlXGPR+AB model on the Synset-2 dataset. If you want to train a mlXGPR+AB+RE model comment lines 24-25 and uncomment lines 27-28. It takes about 30 minutes to train with n_jobs=35 on our server.  
-``python train_classifierchain.py`` will train a mlXGPR+Chain model on the Synset-2 dataset. It takes about an hour to train with n_jobs=35 on our server.  
+
+``python train_classifierchain.py`` will train a mlXGPR+Chain model on the Synset-2 dataset. If you want to train a mlXGPR+RankChain model comment lines 28-29 and uncomment lines 31-34. It takes about an hour to train with n_jobs=35 on our server.  
 # Creating a PGDB with PathoLogic  
 -We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
