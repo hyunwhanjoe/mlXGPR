@@ -41,3 +41,11 @@ def load_csvindex(csv_file, key, value):
             index[row[key]] = row[value]
     
     return index
+
+def read_arrayfile_to_list(name):
+    l = list()
+    with open(name, "r") as f:
+        for line in f:
+            if line != '':
+                l.append(int(line))
+    return l
