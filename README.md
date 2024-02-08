@@ -22,6 +22,7 @@ The trained model and data can be downloaded [here](https://drive.google.com/dri
 -Unzip models.zip into the models directory.  
 -Unzip evaluation.zip into the data/processed directory. The order of the PGDBs in gold_dataset_6_X.npy is AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc.  
 -Unzip Synset-2.zip into the data/processed directory.  
+-Unzip biocyc205_tier23_9255.zip into the data/processed directory.  
 # References
 In the references directory there are two csv files that summarizes the index and corresponding pathway id/EC number.  
 The order.txt file lists the order of the classifier chain.  
