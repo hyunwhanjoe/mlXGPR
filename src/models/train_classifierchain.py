@@ -16,6 +16,8 @@ data_path = Path('../../data/processed')
 y_type = 'int64'
 X_path = data_path/'Synset-2_X.npy'
 y_path = data_path/'Synset-2_y.npy'
+# X_path = data_path/'biocyc205_tier23_9255_X.npy'
+# y_path = data_path/'biocyc205_tier23_9255_y.npy'
 
 X_train, y_train = read_data(X_path, y_path, y_type, ab_only=True)
 n_jobs=35
@@ -32,6 +34,7 @@ model_name = 'mlXGPR_Chain.pkl'
 # order = read_arrayfile_to_list('../../references/'+order_file)
 # chain = ClassifierChain(clf, order=order)
 # model_name = 'mlXGPR_RankChain.pkl'
+# model_name = 'mlXGPR_RankChain_Biocyc.pkl'
 
 chain.fit(X_train, y_train)
 t1 = time.time() - t0
