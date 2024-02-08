@@ -38,7 +38,7 @@ You can evaluate the model with the files in the src/models directory.
 # Train Model
 ``python train_mlxgpr.py`` will train a mlXGPR+AB model on the Synset-2 dataset. If you want to train a mlXGPR+AB+RE model comment lines 24-25 and uncomment lines 27-28. It takes about 30 minutes to train with n_jobs=35 on our server.  
 
-``python train_classifierchain.py`` will train a mlXGPR+Chain model on the Synset-2 dataset. If you want to train a mlXGPR+RankChain model comment lines 28-29 and uncomment lines 31-34. It takes about an hour to train with n_jobs=35 on our server.  
+``python train_classifierchain.py`` will train a mlXGPR+Chain model on the Synset-2 dataset. If you want to train a mlXGPR+RankChain model comment lines 30-31 and uncomment lines 33-36. If you want to train a mlXGPR+RankChain model on the BioCyc Tier 2/3 dataset comment lines 17-18 and 36 while uncommenting lines 19-20 and 37. It takes about an hour to train with n_jobs=35 on the Synset-2 dataset and 30 minutes for the Biocyc dataset on our server.      
 # Creating a PGDB with PathoLogic  
 -We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
