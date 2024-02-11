@@ -1,7 +1,11 @@
+import time
+
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 import xgboost as xgb
 import numpy as np
+
+from train_mlxgpr import log
 
 import sys
 sys.path.append('../utility')
@@ -39,8 +43,20 @@ train_test_split(X_train, y_train, test_size=(1/6), shuffle=False)
 
 model_path = '../../models/'
 model_name = 'mlXGPR_AB_split.json'
-clf = xgb.XGBClassifier()
-clf.load_model(model_path+model_name)
+
+n_jobs=35
+clf = xgb.XGBClassifier(n_jobs=n_jobs,
+                        tree_method='hist',
+                        max_depth=4,
+                        n_estimators=22)
+t0 = time.time()
+clf.fit(X_train, y_train)
+t1 = time.time() - t0
+log(model_name, t1, n_jobs)
+clf.save_model(model_path+model_name)
+
+# clf = xgb.XGBClassifier()
+# clf.load_model(model_path+model_name)
 
 order = determine_chain_order((X_valid,y_valid), clf, f1_score)
 file_name='order.txt'
