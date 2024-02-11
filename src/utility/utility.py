@@ -49,3 +49,8 @@ def read_arrayfile_to_list(name):
             if line != '':
                 l.append(int(line))
     return l
+    
+def write_array_to_file(file_name, a):
+    with open(file_name, "w") as f:
+        for value in a:
+            f.write(str(value)+'\n')
