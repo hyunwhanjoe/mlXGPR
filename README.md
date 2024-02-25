@@ -60,4 +60,9 @@ You can determine the chain order by ranking with the file in the src/models dir
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
 -In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\data  
 # Data Source  
--Information about the source for each dataset is in the data/raw/ directory.  
+Information about the source for each dataset is in the data/raw directory.  
+# Process Datasets
+You can create the datasets with the files in the src/data directory.  
+
+``python make_synset2.py`` will process the Synset2 dataset to be used for training. The resulting files will be created in the data/processed directory. Both X and y files take a few seconds to create.  
+``python make_gold_dataset.py`` will process the golden dataset to be used for evaluation. The resulting files will be created in the data/processed directory.  
