@@ -48,22 +48,25 @@ You can determine the chain order by ranking with the file in the src/models dir
 ``python determine_chain_order.py`` will load a trained model that will be used to determine the chain order. If you want to train a new model to determine the chain order, uncomment lines 47-56 and comment lines 58-59. The classifier chain order will be written into a text file in the references directory.  
 # Data Source  
 Information about the source for each dataset is in the data/raw directory.  
+Download the original datasets into the data/raw directory.  
 # Process Datasets
 You can create the datasets with the files in the src/data directory.  
 
 ``python make_synset2.py`` will process the Synset2 dataset to be used for training. The resulting files will be created in the data/processed directory. Both X and y files take a few seconds to create.  
 
-``python make_gold_dataset.py`` will process the golden dataset to be used for evaluation. The resulting files will be created in the data/processed directory.  
+``python make_gold_dataset.py`` will process the golden dataset to be used for evaluation. The resulting files will be created in the data/processed directory.
+
+Instructions to create the PathoLogic input files will be added soon.  
 # Creating a PGDB with PathoLogic  
 -We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
 -After you installed Pathway Tools, open it and on the Tools tab click on PathoLogic.  
 -When the the PathoLogic window opens on the Database tab, click on Create New.  
 -After naming the PGDB, choose the Organism taxonomic class. For example the class for AraCyc is Arabidopsis thaliana.  
--Create the PGDB afterwards by pressing ok. 
+-Create the PGDB afterwards by pressing ok.  
 -Press No to skip the replicon editor.  
--Put the relevant 0.pf and genetic-elements.dat files (located in the pathologic directory in evaluation.zip) in the input directory where your PGDB is stored. For example on Windows the input directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\input  
+-Put the relevant 0.pf and genetic-elements.dat files (located in the pathologic directory in evaluation.zip) in the input directory where your PGDB is stored. For example on Windows the input directory path is Documents\Pathway Tools\ptools-local\pgdbs\User_name\PGDB_Name\1.0\input . The 2 input files in the pruned and unpruned directories are the same.  
 -Go to the Build tabs on the PathoLogic window and select Trial Parse to see if there is any issues. If there aren't, select Automated Build.  
--For the Pathway Scoring Parameters, we selected No for Generate Cellular Overview and Prepare Blast databases. If you get a warning that blastp.exe wasn't found you can dismiss it. Press okay to create your PGDB and close the PathoLogic window after it is created.   
+-For the Pathway Scoring Parameters, we selected No for Generate Cellular Overview and Prepare Blast databases. If you get a warning that blastp.exe wasn't found you can dismiss it. Press okay to create your PGDB and close the PathoLogic window after it is created.  
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
--In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\user\aracyc\1.0\data  
+-In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\User_name\PGDB_name\1.0\data  
