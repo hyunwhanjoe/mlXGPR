@@ -54,10 +54,17 @@ You can create the datasets with the files in the src/data directory.
 
 ``python make_synset2.py`` will process the Synset2 dataset to be used for training. The resulting files will be created in the data/processed directory. Both X and y files take a few seconds to create.  
 
-``python make_gold_dataset.py`` will process the golden dataset to be used for evaluation. The resulting files will be created in the data/processed directory.
+``python make_gold_dataset.py`` will process the golden dataset to be used for evaluation. The resulting files will be created in the data/processed directory.  
+# Create PathoLogic Input Files
+PathoLogic input files were created using [prepBioCyc](https://github.com/arbasher/prepBioCyc) with Python 3.8.  
 
-Instructions to create the PathoLogic input files will be added soon.  
-# Creating a PGDB with PathoLogic  
+-Install the necessary dependencies with ``pip install -r requirements.txt``. If you get an error replace sklearn on line 3 on requirements.txt with scikit-learn.  
+-Create a directory called object in the prepBioCyc directory and place biocyc.pkl from [here](https://zenodo.org/records/5034912#.YNfvauhKhPZ) into the object directory. biocyc.pkl is in the objectset directory from triUMPF_materials.zip. Afterwards create a directory called database in the prepBioCyc directory.  
+-Run ``python main.py --build-indicator --kbpath "../database" --ospath "../object"``. If you get an ValueError on main.py for line 36, comment out the line. This process takes about 10 seconds on our server.  
+-Run ``python main.py --build-golden-dataset --build-pathologic-input --kbpath "../database" --ospath "../object" --dspath "../dataset"``. This process takes about 20 seconds on our server.  
+
+A directory called dataset will be created in the prepBioCyc directory. In this directory, a directory called ptools will contain directories with the necessary PathoLogic input files. Directories golden_1_0 to golden_1_5 will correspond to the PGDBs (AraCyc, EcoCyc, HumanCyc, LeishCyc, TrypanoCyc, YeastCyc). The 0.pf and genetic-elements.dat files generated are the same files in evaluation.zip  
+# Creating a PGDB with PathoLogic   
 -We used PathoLogic version 22 to generate the PGDBs. All PGDBs for the manuscript were created on a Windows 10 pc.  
 -First apply for a license to download Pathway Tools [here](https://biocyc.org/download.shtml)  
 -After you installed Pathway Tools, open it and on the Tools tab click on PathoLogic.  
