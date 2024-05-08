@@ -77,3 +77,9 @@ A directory called dataset will be created in the prepBioCyc directory. In this 
 -For the Pathway Scoring Parameters, we selected No for Generate Cellular Overview and Prepare Blast databases. If you get a warning that blastp.exe wasn't found you can dismiss it. Press okay to create your PGDB and close the PathoLogic window after it is created.  
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
 -In the data directory where your PGDB is stored, copy the pathways.col and pathways.dat files into the relevant PGDB directory in data/processed/pathologic. For example on Windows the data directory path is Documents\Pathway Tools\ptools-local\pgdbs\User_name\PGDB_name\1.0\data  
+# Development Setup
+The codebase for mlXGPR was developed on a Windows desktop which remote accesses a linux server through ssh.  
+We use WSL for key-based authentication and disabled authentication through passwords for security.  
+WinSCP is used for secure file transfer and puttygen is used to generate a key for key-based authentication.  
+We also use key-based authentication for GitHub.  
+Notepad++ is used for text editing through WinSCP.   
