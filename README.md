@@ -83,3 +83,5 @@ We use Windows Terminal with WSL for key-based authentication and disabled authe
 WinSCP is used for secure file transfer and puttygen is used to generate a key for key-based authentication.  
 We also use key-based authentication for GitHub.  
 Notepad++ is used for text editing through WinSCP.   
+# Reports
+The latex source files, figures and cover letters are located in the reports folder.  
