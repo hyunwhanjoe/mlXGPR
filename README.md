@@ -1,6 +1,7 @@
 # Description
 This is the codebase for the article [Multi-label Classification with XGBoost for Metabolic Pathway Prediction](https://doi.org/10.1186/s12859-024-05666-0) published in BMC Bioinformatics.  
 We are currently updating the source code and data.   
+If there is something missing you can request for it by creating a new issue and we will get back to you shortly.  
 We want to thank the authors of [mlLGPR](https://github.com/hallamlab/mlLGPR) for open sourcing their code and data because this study would not have been possible without them.  
 
 The project structure is based on the [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) project structure.  
