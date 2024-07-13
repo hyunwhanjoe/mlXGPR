@@ -8,6 +8,8 @@ from sklearn import preprocessing
 This function assumes that there are 3650 enzymatic reactions
 """
 def read_data(X_path, y_path, y_type, binarize=False, ab_only=False, n_ecs=3650):
+    print(X_path)
+    print(y_path)
     with open(X_path, 'rb') as X_file, open(y_path, 'rb') as y_file:
         X = np.load(X_file, allow_pickle=False)
         y = np.load(y_file, allow_pickle=False)
