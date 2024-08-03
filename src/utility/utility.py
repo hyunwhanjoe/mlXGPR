@@ -26,6 +26,10 @@ def read_data(X_path, y_path, y_type, binarize=False, ab_only=False, n_ecs=3650)
         return X, y
         
 
+def save_np(f_path, obj):
+    with open(f_path, 'wb') as f:
+        np.save(f, obj, allow_pickle=False)
+
 def save_pickle(data, file_name):
     with open(file_name, 'wb') as f:
         return pkl.dump(data,f)
