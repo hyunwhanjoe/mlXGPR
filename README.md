@@ -73,7 +73,7 @@ A directory called dataset will be created in the prepBioCyc directory. In this 
 -After naming the PGDB, choose the Organism taxonomic class. For example the class for AraCyc is Arabidopsis thaliana.  
 -Create the PGDB afterwards by pressing ok.  
 -Press No to skip the replicon editor.  
--Put the relevant 0.pf and genetic-elements.dat files (located in the pathologic directory in evaluation.zip) in the input directory where your PGDB is stored. For example on Windows the input directory path is Documents\Pathway Tools\ptools-local\pgdbs\User_name\PGDB_Name\1.0\input . The 2 input files in the pruned and unpruned directories are the same.  
+-Put the relevant .pf and genetic-elements.dat files (located in the pathologic directory in evaluation.zip) in the input directory where your PGDB is stored. For example on Windows the input directory path is Documents\Pathway Tools\ptools-local\pgdbs\User_name\PGDB_Name\1.0\input . The 2 input files in the pruned and unpruned directories are the same. In the genetic-elements.dat file make sure that the ANNOT-FILE name matches the relevant annotated genome.  
 -Go to the Build tabs on the PathoLogic window and select Trial Parse to see if there is any issues. If there aren't, select Automated Build.  
 -For the Pathway Scoring Parameters, we selected No for Generate Cellular Overview and Prepare Blast databases. If you get a warning that blastp.exe wasn't found you can dismiss it. Press okay to create your PGDB and close the PathoLogic window after it is created.  
 -Select the PGDB that you created and afterwards on the File tab, Export, Entire DB to attribute value and BioPAX files.  
