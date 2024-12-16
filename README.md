@@ -86,3 +86,5 @@ We also use key-based authentication for GitHub.
 Notepad++ is used for text editing through WinSCP.   
 # Reports
 The latex source files, figures and cover letters are located in the reports folder.  
+# Article Errata
+For the last sentence in the last paragraph for the subsection Prediction model and multi‑label learning process, "Algorithm 1 summarizes the ranking process to determine the chain order." should be Algorithm 3.  
