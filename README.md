@@ -4,7 +4,7 @@ We are currently updating the source code and data.
 If there is something missing you can request for it by creating a new issue and we will get back to you shortly.  
 We want to thank the authors of [mlLGPR](https://github.com/hallamlab/mlLGPR) for open sourcing their code and data because this study would not have been possible without them.  
 
-The project structure is based on the [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) project structure.  
+The project structure is based on the [Cookiecutter Data Science v1](https://cookiecutter-data-science.drivendata.org/v1/) directory structure.  
 All tests were conducted on an Ubuntu 20.04.5 server with dual Intel Xeon CPU E5-2640 v4 and 94G ram.  
 We used [miniconda](https://docs.conda.io/en/latest/miniconda.html) as our package and environment management system.  
 After installing miniconda, use ``conda create -n mlxgpr python=3.9`` to create a python 3.9 environment called mlxgpr.  
